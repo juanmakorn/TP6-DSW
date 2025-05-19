@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Gestión de Productos</h1>
+
+    <div id="formulario-producto">
+        <h2>Nuevo Producto</h2>
+        <label for="nombre-producto">Nombre:</label>
+        <input type="text" id="nombre-producto"><br><br>
+        <label for="descripcion-producto">Descripción:</label>
+        <textarea id="descripcion-producto"></textarea><br><br>
+        <label for="precio-producto">Precio:</label>
+        <input type="number" id="precio-producto" step="0.01"><br><br>
+        <button onclick="agregarProducto()">Agregar</button>
+    </div>
+
+    <div id="lista-productos">
+        <h2>Lista de Productos</h2>
+        <ul id="productos"></ul>
+    </div>
+
+    <script src="../logica_negocio/gestion_productos.js"></script>
+    <script>
+        // Al cargar la página, mostrar los productos existentes
+        mostrarProductos();
+    </script>
+</body>
+</html>
